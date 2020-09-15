@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #FFF;
+    font-family: tahoma;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    animation: bg 5s linear infinite;
+}
+
+.dropping-text {
+    display: inline-block;
+    width: 160px;
+    height: 35px;
+    position: relative;
+}
+
+.dropping-text > div {
+    position: absolute;
+    box-shadow: 0px 60px 25px -20px rgba(0, 0, 0, .3);
+    transform: rotate(-25deg);
+    left: 0px;
+    top: 0px;
+    font-size: 0px;
+    opacity: 0;
+}
+
+.dropping-text > div:nth-child(1) {
+    animation: roll 5s linear infinite 0s;
+}
+
+.dropping-text > div:nth-child(2) {
+    animation: roll 5s linear infinite 1s;
+}
+
+.dropping-text > div:nth-child(3) {
+    animation: roll 5s linear infinite 2s;
+}
+
+.dropping-text > div:nth-child(4) {
+    animation: roll 5s linear infinite 3s;
+}
+
+@keyframes roll{
+    0% {
+        transform: rotate(-25deg);
+        left: 0px;
+        top: 0px;
+        font-size: 0px;
+        opacity: 0;
+    }
+    
+    5% {
+        transform: rotate(0deg);
+        left: 0;
+        top: 0;
+        font: inherit;
+        opacity: 1;
+    }
+    
+    20% {
+        font-size: inherit;
+        opacity: 1;
+        left:0;
+        top: 0;
+        transform: rotate(0)
+    }
+    
+    27% {
+        top: 100px;
+        transform: rotate(15deg);
+        left:0;
+        font-size: 0;
+        opacity: 0;
+    }
+    
+    100% {
+        font-size: 0px;
+        opacity: 0;
+        left: 0;
+    }
+}
+
+@keyframes bg {
+    0% {
+        background: #FF0075;
+    }
+    
+    3% {
+        background: #0094FF;
+    }
+    20% {
+        background: #0094FF;
+    }
+    
+    23% {
+        background: #B200FF;
+    }
+    
+    40% {
+        background: #B200FF;
+    }
+    
+    43% {
+        background: #8BC34A;
+    }
+    
+    60% {
+        background: #8BC34A;
+    }
+    
+    63% {
+        background: #F44336;
+    }
+    
+    80% {
+        background: #F44336;
+    }
+    
+    83% {
+        background: #F44336;
+    }
+    
+    100% {
+        background: #F44336;
+    }
+}
+
